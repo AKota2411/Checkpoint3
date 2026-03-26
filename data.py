@@ -22,7 +22,7 @@ df['authors'] = df.groupby('title')['authors'].transform(lambda x: ', '.join(x.d
 df = df.drop_duplicates(subset=['title'])
 
 # Connect to DB
-conn = sqlite3.connect("bookstore.sqlite")
+conn = sqlite3.connect("database.sqlite")
 cursor = conn.cursor()
 
 # -------------------
